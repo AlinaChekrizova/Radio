@@ -75,9 +75,6 @@ public class Radio {
         if (currentVolume < getMaxVolume()) {
             currentVolume = currentVolume + 1;
         }
-        if (currentVolume == getMaxVolume()) {
-            currentVolume = getMaxVolume();
-        }
         return currentVolume;
     }
     public int decreaseVolume() {
