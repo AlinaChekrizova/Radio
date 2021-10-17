@@ -60,29 +60,6 @@ public class Radio {
 
 
 
-//    public int getCurrentStation() {
-//        return currentStation;
-//    }
-//
-//    public int getMaxStation() {
-//        return 9;
-//    }
-//
-//    public int getMinStation() {
-//        return 0;
-//    }
-//
-//
-//    public int getCurrentVolume () {
-//        return currentVolume;
-//    }
-//
-//    public int getMaxVolume () {
-//        return 10;
-//    }
-//    public int getMinVolume () {
-//        return 0;
-//    }
 
 
 

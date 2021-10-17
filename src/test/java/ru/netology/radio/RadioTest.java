@@ -22,6 +22,64 @@ class RadioTest {
         radio.setCurrentStation(15);
         assertEquals(0, radio.nextStation());
     }
+    @Test
+    public void shouldSwitchNextStationToMaxWithConstructor() {
+        Radio radio = new Radio (15);
+        radio.setCurrentStation(13);
+        assertEquals(14, radio.nextStation());
+    }
+    @Test
+    public void shouldSwitchPreviousStationWithConstructor() {
+        Radio radio = new Radio(15);
+        radio.setCurrentStation(11);
+
+        assertEquals(10, radio.previousStation());
+        assertEquals(10, radio.getCurrentStation());
+    }
+    @Test
+    public void shouldSwitchPreviousStationToMaxWithConstructor() {
+        Radio radio = new Radio(15);
+        radio.setCurrentStation(0);
+
+        assertEquals(14, radio.previousStation());
+        assertEquals(14, radio.getCurrentStation());
+    }
+    @Test
+    public void shouldSwitchPreviousStationToMinWithConstructor() {
+        Radio radio = new Radio(15);
+        radio.setCurrentStation(1);
+
+        assertEquals(0, radio.previousStation());
+        assertEquals(0, radio.getCurrentStation());
+    }
+    @Test
+    public void  shouldSwitchStationManuallyWithConstructor() {
+        Radio radio = new Radio(15);
+        radio.setCurrentStation(5);
+
+        assertEquals(13, radio.setCurrentStation(13));
+        assertEquals(13, radio.getCurrentStation());
+
+    }
+    @Test
+    public void  shouldSwitchStationManuallyBelowMinWithConstructor() {
+        Radio radio = new Radio(15);
+        radio.setCurrentStation(5);
+
+        assertEquals(0, radio.setCurrentStation(-1));
+        assertEquals(0, radio.getCurrentStation());
+
+    }
+    @Test
+    public void  shouldSwitchStationManuallyAboveMaxWithConstructor() {
+        Radio radio = new Radio(15);
+        radio.setCurrentStation(5);
+
+        assertEquals(14, radio.setCurrentStation(20));
+        assertEquals(14, radio.getCurrentStation());
+
+    }
+
 
 
 
