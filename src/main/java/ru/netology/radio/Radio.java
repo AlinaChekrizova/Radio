@@ -31,23 +31,23 @@ public class Radio {
 
 
     public int nextStation() {
-        if (currentStation < getMaxStation()) {
-            currentStation = currentStation + 1;
-            return currentStation;
-        }
         if (currentStation == getMaxStation()) {
             currentStation = getMinStation();
+            return currentStation;
+        }
+        if (currentStation < getMaxStation()) {
+            currentStation = currentStation + 1;
         }
         return currentStation;
     }
 
     public int previousStation() {
-        if (currentStation > getMinStation()) {
-            currentStation = currentStation - 1;
-            return currentStation;
-        }
         if (currentStation == getMinStation()) {
             currentStation = getMaxStation();
+            return currentStation;
+        }
+        if (currentStation > getMinStation()) {
+            currentStation = currentStation - 1;
         }
         return currentStation;
     }
